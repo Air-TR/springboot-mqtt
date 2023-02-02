@@ -1,0 +1,19 @@
+server:
+  port: 8087
+  servlet:
+    context-path: /mqtt
+
+spring:
+  mqtt:
+    url: tcp://192.168.3.10:1883
+    username: user
+    password: 123456
+    clientId: my_client
+    topic: topic0,topic1,topic2,QPS
+    qos: 0,1,2,0 # ??????? topic ???????????
+    defaultTopic: QPS
+    defaultQos: 0
+    completionTimeout: 3000
+    automaticReconnect: true # ?????????
+    cleanSession: true
+    retained: false
