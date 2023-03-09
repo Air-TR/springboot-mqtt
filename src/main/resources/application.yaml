@@ -3,17 +3,16 @@ server:
   servlet:
     context-path: /mqtt
 
-spring:
-  mqtt:
-    url: tcp://192.168.3.10:1883
-    username: user
-    password: 123456
-    clientId: my_client
-    topic: topic0,topic1,topic2,QPS
-    qos: 0,1,2,0 # 与上面的 topic 要一一对应
-    defaultTopic: QPS
-    defaultQos: 0
-    completionTimeout: 3000
-    automaticReconnect: true # 断开连接重新连接
-    cleanSession: true
-    retained: false
+mqtt:
+  url: tcp://192.168.3.10:1883
+  username: user
+  password: 123456
+  clientId: mqtt_client
+  topic: topic0,topic1,topic2,QPS
+  qos: 0,1,2,0 # 与上面的 topic 要一一对应
+  defaultTopic: QPS
+  defaultQos: 0
+  completionTimeout: 3000
+  automaticReconnect: true # 断开连接重新连接
+  cleanSession: true
+  retained: false
